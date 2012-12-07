@@ -1,5 +1,7 @@
 # Class: devtools::params
 #
+#   Define the list of package to install according to the OS used
+#
 class devtools::params () {
 
   case $::osfamily {
