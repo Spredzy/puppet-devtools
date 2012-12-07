@@ -1,7 +1,7 @@
 puppet-devtools
 ===============
 
-A Puppet module thant install all necessary packages for compiling basic software
+A Puppet module that installs all necessary packages for compiling basic software
 
 ## Examples
 

@@ -16,6 +16,10 @@ class devtools() {
 
   include devtools::params
 
+  if $::osfamily == 'RedHat' {
+    require epel
+  }
+
   package {$devtools::params::packages:
     ensure => latest,
   }
