@@ -12,12 +12,16 @@
 #
 #   include devtools
 #
-class devtools() {
+class devtools(
+  $manage_epel = true,
+) {
 
   include devtools::params
 
   if $::osfamily == 'RedHat' {
-    require epel
+    if $manage_epel {
+      require epel
+    }
   }
 
   package {$devtools::params::packages:
