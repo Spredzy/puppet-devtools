@@ -13,7 +13,8 @@
 #   include devtools
 #
 class devtools(
-  $manage_epel = true,
+  $manage_epel    = true,
+  $package_ensure = latest,
 ) {
 
   include devtools::params
@@ -25,7 +26,7 @@ class devtools(
   }
 
   package {$devtools::params::packages:
-    ensure => latest,
+    ensure => $package_ensure,
   }
 
 }
